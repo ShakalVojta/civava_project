@@ -1,0 +1,101 @@
+.programs-section {
+    background-color: white;
+    padding: 2rem 0;
+  }
+  
+  .programs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  .program-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 350px;
+  }
+  
+  .program-row.reverse {
+    direction: rtl;
+  }
+  
+  .program-row.reverse > * {
+    direction: ltr;
+  }
+  
+  .program-image {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 100%;
+  }
+  
+  .program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .program-content {
+    background-color: #f9f5f2;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .program-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .program-content p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  .program-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+  
+  .program-content li {
+    margin-bottom: 7px;
+    color: #666;
+  }
+  
+  /* Responzivní design */
+  @media (max-width: 768px) {
+    .program-row {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    
+    .program-image, .program-content {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .programs-section {
+      padding: 1rem;
+    }
+    
+    .program-content {
+      padding: 15px;
+    }
+    
+    .program-content h2 {
+      font-size: 1.3rem;
+    }
+  }

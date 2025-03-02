@@ -1,14 +1,14 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes/routes';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
   return (
-    <div>
-        <div className="container">
-            <h1>Eva Klapačová</h1>
-            <p>Portfolio v přípravě</p>
-        </div>
-    </div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 
